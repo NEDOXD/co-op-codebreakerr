@@ -1,64 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Co-op Codebreaker</title>
-    <link rel="stylesheet" href="style.css">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Co-op Codebreaker</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Co-op Codebreaker</h1>
-
-        <!-- Join Section -->
-        <div id="joinSection">
-            <input id="nameInput" placeholder="Enter Name">
-            <input type="color" id="nameColor" value="#00ff00">
-            <input id="roomInput" placeholder="Room Code">
-
-            <!-- Avatar Editor -->
-            <div id="avatarEditor">
-                <h3>Avatar Editor</h3>
-                <canvas id="avatarCanvas" width="128" height="128"></canvas>
-                <input type="color" id="pixelColor" value="#00ff00">
-                <label>
-                    Hat:
-                    <select id="hatSelect">
-                        <option value="none">None</option>
-                        <option value="beanie">Beanie</option>
-                        <option value="crown">Crown</option>
-                        <option value="topHat">Top Hat</option>
-                    </select>
-                </label>
-                <label>
-                    Glasses:
-                    <select id="glassesSelect">
-                        <option value="none">None</option>
-                        <option value="sunglasses">Sunglasses</option>
-                        <option value="nerd">Nerd</option>
-                    </select>
-                </label>
-            </div>
-
-            <button id="joinBtn">Join Room</button>
-        </div>
-
-        <!-- Game Section -->
-        <div id="game" style="display:none;">
-            <div id="howToPlay">
-                <h3>How to Play</h3>
-                <p>Enter name & room, pick avatar, guess 4 digits. ✅=correct+pos ⚪=correct number ❌=wrong</p>
-            </div>
-            <input id="guessInput" maxlength="4" placeholder="Your Guess">
-            <button id="guessBtn">Submit</button>
-            <ul id="guessesList"></ul>
-            <div id="status"></div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="client.js"></script>
+<div class="container">
+<h1>Co-op Codebreaker</h1>
+<div id="joinSection">
+<input id="nameInput" placeholder="Enter Name"><input type="color" id="nameColor" value="#00ff00">
+<input id="roomInput" placeholder="Room Code">
+<div id="avatarEditor">
+<h3>Avatar Editor</h3>
+<canvas id="avatarCanvas" width="128" height="128"></canvas>
+<input type="color" id="pixelColor" value="#00ff00">
+<label>Hat: <select id="hatSelect"><option value="none">None</option><option value="beanie">Beanie</option><option value="crown">Crown</option><option value="topHat">Top Hat</option></select></label>
+<label>Glasses: <select id="glassesSelect"><option value="none">None</option><option value="sunglasses">Sunglasses</option><option value="nerd">Nerd</option></select></label>
+</div>
+<button id="joinBtn">Join Room</button>
+</div>
+<div id="game" style="display:none;">
+<div id="howToPlay"><h3>How to Play</h3><p>Enter name & room, pick avatar, guess 4 digits. ✅=correct+pos ⚪=correct number ❌=wrong</p></div>
+<input id="guessInput" maxlength="4" placeholder="Your Guess"><button id="guessBtn">Submit</button>
+<ul id="guessesList"></ul><div id="status"></div>
+</div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
 </body>
 </html>
-
